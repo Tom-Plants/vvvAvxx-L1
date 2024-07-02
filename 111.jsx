@@ -1,14 +1,18 @@
 // ==UserScript==
-// @name         表情包
-// @namespace    xxxx
-// @version      1.0
+// @name         少女前线2追放表情包
+// @namespace    https://greasyfork.org/users/1302103
+// @version      1.3.000
 // @icon         http://bbs.nga.cn/favicon.ico
-// @description  表情脚本
-// @author       xx
+// @description  少前表情脚本（加入追放表情的修改版本）
+// @author       魔改：P*4
 // @include      /^https?://(bbs\.ngacn\.cc|nga\.178\.com|bbs\.nga\.cn|ngabbs\.com)/.+/
 // @grant        GM_registerMenuCommand
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @grant        GM_xmlhttpRequest
+// @grant        GM_notification
+// @connect      github.com
+// @connect      raw.githubusercontent.com
 // ==/UserScript==
 
 ((ui, poster) => {
@@ -128,6 +132,32 @@
 
         settingsWindow.appendChild(table);
 
+        // 添加检查更新按钮
+        const updateButton = document.createElement('button');
+        updateButton.innerText = '检查更新';
+        updateButton.style.marginTop = '20px';
+        updateButton.onclick = () => {
+            GM_xmlhttpRequest({
+                method: 'GET',
+                url: 'https://raw.githubusercontent.com/xyixc/vvvAvxx-L1/main/emoji.json',
+                onload: (response) => {
+                    const newIconSets = JSON.parse(response.responseText);
+                    const isUpdated = JSON.stringify(iconSets) !== JSON.stringify(newIconSets);
+
+                    if (isUpdated) {
+                        iconSets = newIconSets;
+                        GM_setValue('iconSets', JSON.stringify(newIconSets)); // 使用不同的键名存储新数据
+                        location.reload();
+                    }
+                },
+                onerror: (error) => {
+                    console.error('请求失败:', error);
+                }
+            });
+        };
+        settingsWindow.appendChild(updateButton);
+
+
         document.body.appendChild(settingsWindow);
     };
 
@@ -139,9 +169,9 @@
 
     // 修改iconSetStatus的初始化
     let iconSetStatus = GM_getValue('iconSetStatus') || {
-        'xx表情包': true,
-        'xxx表情包': true,
-        'xxxx表情': true,
+        '追放表情包5': true,
+        '追放表情包6': true,
+        '16Lab表情': true,
     };
 
     // 根据iconSets数组的内容自动更新iconSetStatus对象
