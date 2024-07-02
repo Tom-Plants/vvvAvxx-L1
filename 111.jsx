@@ -33,144 +33,28 @@
 
     updateStoredIconSetStatus();
 
-    const iconSets = [
-        {
-            name: 'Sop2',
-            credit: '©作者：쮸운',
-            data:
-                [
-                    './mon_201901/11/-klbw3Q5-gq1dKaT8S2s-2s.gif',
-                    './mon_201901/22/-klbw3Q5-jq7cZtToS2s-2s.gif',
-                    './mon_201901/11/-klbw3Q5-4j3kK7T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-6fo2KdT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-7ogmK4T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-5y0pKjToS2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-kcziK3T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-erjzK3T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-daxdKiToS2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-aam7KdT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-7jg3K4T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-k393K4T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-fulsKfT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-1g1KaT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-5nn2K3T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-b8asKfT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-hf97KbT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-24c5KcT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-daqcK4T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-j0p5KbT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-3b6jKgT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-8wxkKhT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-4sedK2T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-aej0KeT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-fz52KdT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-oi5K8T8S2s-2s.jpg',
-                    './mon_201901/11/-klbw3Q5-97uKbT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-bk5xKbT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-h5jqKfT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-1qhyKeT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-d3drKjToS2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-ioolKaT8S2s-2s.png',
-                    './mon_201901/11/-klbw3Q5-2w10KlToS2s-2s.jpg',
-                ],
-        },
-        {
-            name: '年糕狗',
-            credit: '©作者：祁连子',
-            data:
-                [
-                    './mon_201901/24/-klbw3Q5-i8mnKqToS2g-2s.gif',
-                    './mon_201901/24/-klbw3Q5-hc3cK9T8S2g-2s.gif',
-                    './mon_201901/24/-klbw3Q5-bnofKsToS2g-2s.gif',
-                    './mon_201907/03/-bqqbQ5-6iwwK1gToS2g-2s.gif',
-                    './mon_201901/24/-klbw3Q5-5tghKsToS2m-2s.gif',
-                    './mon_201901/24/-klbw3Q5-ka7xKaT8S2g-2s.gif',
-                    './mon_201901/24/-klbw3Q5-c43iK6T8S2g-2s.gif',
-                    './mon_201901/24/-klbw3Q5-6jl8K8T8S2g-2s.gif',
-                    './mon_201907/06/-bqqbQ5-8fgyK4T8S2g-2s.gif',
-                    './mon_201907/06/-bqqbQ5-1v7iKgT8S2g-2s.gif',
-                    './mon_201907/06/-bqqbQ5-ejyrK6T8S2g-2s.gif',
-                    './mon_201907/06/-bqqbQ5-ka9qKfT8S2g-2s.gif',
-                    './mon_201907/06/-bqqbQ5-4n1rKlToS2i-2s.gif',
-                ],
-        },
-        {
-            name: '人形小剧场',
-            credit: '©泡面番',
-            data:
-                [
-                    './mon_202003/18/-mpnxjQ5-chehKlToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-62mpKkToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-fdagKmToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-1vlKoToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-97v1KiToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-2p7aKlToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-i5w7KlToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-b10jKkToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-4r0wKlToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-jnzxKmToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-deh7KmToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-7a7cKkToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-zthKoToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-gclbKnToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-10fjKkToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-9xtdKmToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-3wxwKjToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-jbkiKlToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-d7ljKmToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-77noKkToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-flpbKmToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-9opzKkToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-3retKlToS2s-2s.png',
-                    './mon_202003/18/-mpnxjQ5-j2igKlToS2s-2s.png',
-                    './mon_202003/20/-mpnxjQ5-4nq3KnToS2s-2s.png',
-                    './mon_202003/20/-mpnxjQ5-htboKnToS2s-2s.png',
-                    './mon_202003/20/-mpnxjQ5-bsnpKiToS2s-2s.png',
-                    './mon_202106/23/-mpnxjQ2o-cct8KtToS2s-2s.png',
-                    './mon_202106/23/-mpnxjQ2o-ctk7KtToS2s-2s.png',
-                    './mon_202106/23/-mpnxjQ2o-eljiKuToS2s-2s.png',
-                    './mon_202106/23/-mpnxjQ2o-6kkpKtToS2s-2s.png',
-                    './mon_202106/23/-mpnxjQ2o-8ecqKvToS2s-2s.png',
-                ],
-            text:
-                [
-                    '比心',
-                    '吃瓜',
-                    '打call',
-                    '冲鸭',
-                    '呆',
-                    '得意',
-                    '干杯',
-                    '害羞',
-                    '黑化',
-                    '精神抖擞',
-                    '哭',
-                    '卖萌',
-                    '小钱钱',
-                    '色',
-                    '认真',
-                    '睡觉',
-                    '晚安',
-                    '无语',
-                    '嫌弃',
-                    '小公主',
-                    '耶',
-                    '疑惑',
-                    '震惊',
-                    '醉',
-                    '期待',
-                    '心虚',
-                    '叶！',
-                    'S',
-                    'A',
-                    'B',
-                    'C',
-                    'D',
-                ],
-        },
+    let iconSets = [];
 
-    ];
+    // 获取JSON数据的函数
+    const fetchIconSets = () => {
+        GM_xmlhttpRequest({
+            method: "GET",
+            url: "https://raw.githubusercontent.com/xyixc/vvvAvxx-L1/main/emoji.json", // 替换为你的JSON数据URL
+            onload: function(response) {
+                if (response.status === 200) {
+                    iconSets = JSON.parse(response.responseText);
+                    updateIconSetStatus();
+                } else {
+                    console.error("Failed to fetch icon sets");
+                }
+            },
+            onerror: function() {
+                console.error("Error occurred while fetching icon sets");
+            }
+        });
+    };
 
+    fetchIconSets();
 
     // 创建浮动窗口
     const createSettingsWindow = () => {
